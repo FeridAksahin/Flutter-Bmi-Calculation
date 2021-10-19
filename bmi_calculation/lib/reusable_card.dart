@@ -8,16 +8,7 @@ class ReusableCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPress, //input pageteki gesture detectoru sildik buradan acıcaz fonksiyon kullanarak
-      /*
-      şöyle idi
-      GestureDetector(
-                    onTap: (){
-                      setState(() {
-                       // updateColour(Gender.female);
-                        selectedGender = Gender.female;
-                      }); } , şimdi onTap yerine çağıdığımızda yazıcaz setState fonksiyonunu
-       */
+      onTap: onPress, 
       child: Container(
         child: cardChild,
         margin: EdgeInsets.all(15.0),
