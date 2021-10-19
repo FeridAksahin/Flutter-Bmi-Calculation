@@ -8,18 +8,9 @@ class CalculatorBrain {
   final int weight;
 
   double _bmi;
-  /*
-  private değişken yazdık. Çünkü önceden bmi değişkeni double bmi; olarak calculateBMI metodunda
-   tanımlanmıştı sadece ve getResulttada kullanılması lazımdı fakat bmi değişkeni sadece tanımlandığı
-   metot içinde kullanılabilirdi {} içinde dolayısıyla getResultta kullanıldığında hata veriyodu çünkü orada bmi
-   değişkeni tanımlı değil. Oysa şimdi private olarak kurduk class içinde böylece bu classta her
-   yerde erişilebilir.
-   */
-
   String calculateBMI() {
     _bmi = weight / pow(height/100, 2);
-    return _bmi.toStringAsFixed(1); //bmi değişkenini stringe çevirdik.
-    //toStringAsFixed(1) yani virgülden sonra 1 tane sayı olsun dedik
+    return _bmi.toStringAsFixed(1); 
   }
 
   String getResult (){
