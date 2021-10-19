@@ -1,7 +1,7 @@
 import 'package:bmi_calculator/input_page.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
-import 'reusable_card.dart'; //ReusableCard widgetı kullanmak için import ettik
+import 'reusable_card.dart'; 
 class ResultsPage extends StatelessWidget {
 
   ResultsPage({@required this.interpretation, @required this. bmiResult, @required this.resultText});
@@ -16,7 +16,7 @@ class ResultsPage extends StatelessWidget {
         title: Text('BMI CALCULATOR'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly, //spaceEvenly ctrl+q basıp ne oldugu görülebilir
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(child: Container(
@@ -26,7 +26,7 @@ class ResultsPage extends StatelessWidget {
               style: kTitleTextStyle,
             ),
           )),
-          Expanded(flex: 5, child: ReusableCard ( //flex default olarak 1 dir expandedda değiştirilmezse
+          Expanded(flex: 5, child: ReusableCard ( 
             colour: kActiveCardColour,
             cardChild: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -35,8 +35,6 @@ class ResultsPage extends StatelessWidget {
                 Text(resultText.toUpperCase(), style: kresultTextStyle,),
                 Text(bmiResult,style: kBMITextStyle,),
                 Text(interpretation, style: kBodyTextStyle, textAlign: TextAlign.center,),
-                //textler sola doğruydu default olarak textAlign solaydı textleri ortaladık align kodu ile
-
               ],
             ),
           ),),
